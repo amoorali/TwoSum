@@ -1,6 +1,6 @@
 ﻿namespace TaskSolution
 {
-    public class UnitTest1
+    public class ProgramTests
     {
         // Helper function to convert integer array to an array of integers.
         private static List<(int i, int j)> ToPairs(List<int[]> nums)
