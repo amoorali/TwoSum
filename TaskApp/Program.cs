@@ -29,9 +29,7 @@
                 for (int j = i + 1; j < nums.Length; j++)
                 {
                     if (nums[i] + nums[j] == target)
-                    {
                         result.Add(new int[] { i, j });
-                    }
                 }
             }
             return result;
@@ -44,8 +42,10 @@
             for (int i = 0; i < nums.Length; i++)
             {
                 var temp = target - nums[i];
-                if (dict.ContainsKey(temp)) result.Add(new int[] { dict[temp], i });
-                if (!dict.ContainsKey(nums[i])) dict.Add(nums[i], i);
+                if (dict.ContainsKey(temp))
+                    result.Add(new int[] { dict[temp], i });
+                if (!dict.ContainsKey(nums[i]))
+                    dict.Add(nums[i], i);
             }
             return result;
         }
